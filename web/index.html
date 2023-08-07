@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Cadastro de Campus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/qNAWsis.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #00a6c4;
+            overflow: hidden;
+            width: 0;
+            transition: width 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            white-space: nowrap;
+        }
+
+        h1:hover::after {
+            width: 100%;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00a6c4;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: -120%;
+            left: -120%;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #008eaa;
+        }
+
+        .button:hover::before {
+            top: -10%;
+            left: -10%;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-text="Sistema de Cadastro de Campus">Sistema de Cadastro de Campus</h1>
+    <a href="CampusInterface/listarCampus.jsp" class="button">Ver Lista</a>
+    <a href="CampusInterface/frmCampusView.html" class="button">Página de Cadastro</a>
+</body>
+</html>
